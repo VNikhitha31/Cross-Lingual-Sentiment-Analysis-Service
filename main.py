@@ -11,11 +11,16 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
+
 app = FastAPI(
     title="Cross-Lingual Sentiment Analysis API",
-    description="Multi-language sentiment analysis service with translation support",
-    version="1.0.0"
+    description="REST API for multilingual sentiment analysis using Transformers",
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
+
 
 # CORS middleware
 app.add_middleware(
